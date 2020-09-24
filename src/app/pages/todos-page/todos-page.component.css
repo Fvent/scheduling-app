@@ -1,0 +1,13 @@
+.container {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.row {
+    margin: 10%
+}

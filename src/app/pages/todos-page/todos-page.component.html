@@ -1,0 +1,11 @@
+
+<div class="container">
+    <h1 class="display-3">Todo List</h1>
+</div>
+
+<div class="row row-cols-4" *ngFor="let task of tasks">
+        <div class="col col-lg"><h6 class="display-5">{{ task.date }} : {{ task.name }} : {{ task.description }}</h6></div>
+        <div class="col col-sm"><button class="btn btn-success" (click)="onCompleteButton(task)">Completed</button></div>
+        <div class="col col-sm"><button class="btn btn-warning" (click)="onBacklogButton(task)">Back-Log</button></div>
+        <div class="col col-sm"><button class="btn btn-danger" (click)="onDeleteButton(task)" >Delete</button></div> 
+</div>

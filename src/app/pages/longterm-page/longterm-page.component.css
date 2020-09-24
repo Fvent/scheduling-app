@@ -1,0 +1,30 @@
+#addbutton {
+    position: absolute;
+    margin-left: 10%;
+}
+
+.media {
+    margin: 5%;
+}
+
+.jumbotron{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#GoalForm {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+h3 {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#formbutton {
+    margin-top: 1%;
+    margin-left: 85%;
+}

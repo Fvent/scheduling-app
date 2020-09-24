@@ -1,0 +1,17 @@
+<h1 class="display-6">Scheduling</h1>
+
+<button (click)="onAddButton()" id="addbutton" class="btn btn-success">Add +</button>
+
+<!-- *ngIf="showTaskForm" -->
+<form *ngIf="showTaskForm" class="form-group" id="TaskForm" [formGroup]="taskForm" (ngSubmit)="onTaskSubmit()">
+    <label for="TaskDate">Due Date:&nbsp;&nbsp;</label>
+    <input type="date" class="form-control" id="taskDate" formControlName="taskDate">
+    
+    <label for="TaskName">Task: </label>
+    <input type="text" class="form-control" id="taskName" formControlName="taskName">
+    <label for="taskDescription">Description: </label>
+    <textarea class="form-control" rows="3" id="taskDescription" formControlName="taskDescription"></textarea>
+    <button id="formbutton" type="submit" class="btn btn-primary" [disabled]="!taskForm.valid">Submit</button>
+
+</form>
+

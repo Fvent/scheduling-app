@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="display-3">Completed List</h1>
+</div>
+
+<div class="row row-cols-4" *ngFor="let c of completed">
+    <div class="col col-lg"><h6 class="display-5">{{ c.date }} : {{ c.name }} : {{ c.description }}</h6></div>
+    <div class="col col-sm"><button class="btn btn-primary" (click)="onTodoButton(c)">Todo</button></div>
+    <div class="col col-sm"><button class="btn btn-warning" (click)="onBacklogButton(c)">Back-Log</button></div>
+    <div class="col col-sm"><button class="btn btn-danger" (click)="onDeleteButton(c)">Delete</button></div> 
+</div>

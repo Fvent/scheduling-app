@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'scheduling-app';
+  date='';
+
+  constructor() {
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth()+1;
+    var year = today.getFullYear();
+    this.date = month+'-'+day+'-'+year
+  }
+ 
+  
 }

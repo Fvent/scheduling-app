@@ -1,0 +1,28 @@
+
+<h3 class="display-6">Long Term Goals</h3>
+
+<div class="jumbotron">
+    <p>On this tab add longer term goals that should drive you forward while completing tasks.</p>
+    <p>The contents on this page are supposed to remind you what your expecting to achieve.</p>
+</div>
+
+<div class="container">
+    <div *ngFor="let goal of goals">
+        <h6 class="display-5">{{ goal.name }} : {{ goal.description }}</h6>
+    </div>
+</div>
+
+<br>
+
+<button (click)="onAddButton()" id="addbutton" class="btn btn-success">Add +</button>
+
+<!-- *ngIf="showGoalForm" -->
+<form *ngIf="showGoalForm" class="form-group" id="GoalForm" [formGroup]="goalForm" (ngSubmit)="onGoalSubmit()">
+    <label for="goalName">Goal: </label>
+    <input type="text" class="form-control" id="goalName" formControlName="goalName">
+    <label for="goalDescription">Description: </label>
+    <textarea class="form-control" rows="3" id="goalDescription" formControlName="goalDescription"></textarea>
+    <button id="formbutton" type="submit" class="btn btn-primary" [disabled]="!goalForm.valid">Submit</button>
+
+</form>
+
