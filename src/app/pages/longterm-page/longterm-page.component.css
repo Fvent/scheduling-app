@@ -28,3 +28,14 @@ h3 {
     margin-top: 1%;
     margin-left: 85%;
 }
+
+#explanation{
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.col{
+    margin-bottom: 1vh;
+}

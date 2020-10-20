@@ -1,6 +1,6 @@
 
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav class="navbar navbar-light bg-light">
+<nav id="navigation" class="navbar">
   <p class="navbar-brand">Scheduling Browser App</p>
   <a class="nav-link" routerLink="/longterm-page" routerLinkActive="active">Long-Term</a>
   <a class="nav-link" routerLink="/scheduling-page" routerLinkActive="active">Scheduling</a>    
@@ -9,6 +9,6 @@
   <a class="nav-link" routerLink="/backlog-page" routerLinkActive="active">Task Backlog</a>     
 </nav>
 
-<h5>{{ date }}</h5>
+<h5 id="todaysdate">{{ date }}</h5>
 
 <router-outlet></router-outlet>

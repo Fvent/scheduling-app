@@ -1,3 +1,8 @@
-h5{
-    margin-left: 85%;
+#todaysdate{
+    text-align: right;
+    margin-right: 2vw;
+}
+
+#navigation{
+    background-color: white;
 }

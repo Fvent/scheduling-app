@@ -64,6 +64,48 @@ export class LongtermPageComponent implements OnInit {
       this.goals = JSON.parse(localStorage.getItem('goals'));
     }
   }
+
+  // deleteBacklog(task: Task){
+  //   this.backlog = JSON.parse(localStorage.getItem('backlog'));
+  //   var index = this.findBacklogIndex(task);
+  //   // console.log(index);
+  //   // console.log(backlog.name);
+  //   // console.log(backlog.description);
+  //   this.backlog.splice(index, 1);
+  //   localStorage.setItem('backlog', JSON.stringify(this.backlog));
+  // }
+
+  deleteGoal(goal: Goal){
+    this.goals = JSON.parse(localStorage.getItem('goals'));
+    var index = this.findGoalIndex(goal);
+    this.goals.splice(index, 1);
+    localStorage.setItem('goals', JSON.stringify(this.goals));
+  }
+
+
+  // findTaskIndex(task: Task): number{
+  //   var out:number=-1;
+  //   this.tasks.forEach(t => {
+  //     // console.log(t);
+  //     // console.log(task);
+  //     if((t.name == task.name) && (t.description == task.description) ){
+  //       out= this.tasks.indexOf(t);
+  //     }
+  //   });
+  //   return out;
+  // }
+
+  findGoalIndex(goal: Goal): number{
+    var out: number = -1;
+    this.goals.forEach( g => {
+      if((g.name == goal.name) && (g.description == goal.description)){
+        out = this.goals.indexOf(g);
+      }
+    });
+    return out;
+  } 
+
+
   
 
 

@@ -1,14 +1,15 @@
 
 <h3 class="display-6">Long Term Goals</h3>
 
-<div class="jumbotron">
+<div id="explanation" class="jumbotron">
     <p>On this tab add longer term goals that should drive you forward while completing tasks.</p>
     <p>The contents on this page are supposed to remind you what your expecting to achieve.</p>
 </div>
 
 <div class="container">
-    <div *ngFor="let goal of goals">
-        <h6 class="display-5">{{ goal.name }} : {{ goal.description }}</h6>
+    <div class="row row-cols-4" *ngFor="let goal of goals">
+        <div class="col col-lg"><h6 class="display-5">{{ goal.name }} : {{ goal.description }}</h6></div>
+        <div class="col col-lg"><button class="btn btn-danger" (click)="deleteGoal(goal)">Delete</button></div>
     </div>
 </div>
 
